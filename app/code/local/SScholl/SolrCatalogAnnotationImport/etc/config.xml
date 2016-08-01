@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<config>
+	<modules>
+		<SScholl_SolrCatalogAnnotationImport>
+			<version>0.0.1</version>
+		</SScholl_SolrCatalogAnnotationImport>
+	</modules>
+	<global>
+		<helpers>
+			<sschollsolrcatalogannotationimport>
+				<class>SScholl_SolrCatalogAnnotationImport_Helper</class>
+			</sschollsolrcatalogannotationimport>
+		</helpers>
+		<models>
+			<sschollsolrcatalogannotationimport>
+				<class>SScholl_SolrCatalogAnnotationImport_Model</class>
+			</sschollsolrcatalogannotationimport>
+		</models>
+	</global>
+	<crontab>
+		<jobs>
+			<sschollsolrcatalogannotationimport>
+				<schedule>
+					<cron_expr>* * * * *</cron_expr>
+				</schedule>
+				<run>
+					<model>sschollsolrcatalogannotationimport/cronjob_import::run</model>
+				</run>
+			</sschollsolrcatalogannotationimport>
+		</jobs>
+	</crontab>
+	<default>
+		<sschollsolrcatalogannotationimport>
+			<folder>
+				<import>media/sschollsolrcatalogannotationimport/import</import>
+				<imported>media/sschollsolrcatalogannotationimport/imported</imported>
+			</folder>
+		</sschollsolrcatalogannotationimport>
+	</default>
+</config>

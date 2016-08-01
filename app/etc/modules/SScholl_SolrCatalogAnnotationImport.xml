@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<SScholl_SolrCatalogAnnotationImport>
+			<active>true</active>
+			<codePool>local</codePool>
+			<depends>
+				<Mage_Core />
+				<Mage_Cron />
+				<SScholl_OnixImport />
+				<SScholl_SolrCatalog />
+			</depends>
+		</SScholl_SolrCatalogAnnotationImport>
+	</modules>
+</config>
